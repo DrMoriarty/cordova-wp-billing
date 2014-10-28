@@ -9,9 +9,9 @@ using WPCordovaClassLib.Cordova;
 using WPCordovaClassLib.Cordova.Commands;
 using WPCordovaClassLib.Cordova.JSON;
 
-namespace ru.trilan.cordovawp
+namespace WPCordovaClassLib.Cordova.Commands
 {
-    public class Billing : BaseCommand
+    public class WPBilling : BaseCommand
     {
         public async void purchase(string purchaseID)
         {

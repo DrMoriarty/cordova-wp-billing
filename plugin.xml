@@ -8,27 +8,22 @@
     <name>WPBilling</name>
 	<description>In app purchase support for Windows Phone</description>
     <engines>
-        <engine name="cordova" version=">=2.4.0" />
+        <engine name="cordova" version=">=3.0.0" />
     </engines>
 	
     <license>MIT</license>
     <keywords>cordova,phonegap,purchase,billing,wp8</keywords>
+    <js-module src="www/wpbilling.js" name="WPBilling">
+      <clobbers target="wpbilling" />
+    </js-module>
     <!-- wp8 -->
     <platform name="wp8">
-        <js-module src="www/wpbilling.js" name="WPBilling">
-            <clobbers target="wpbilling" />
-        </js-module>
-        
-        <!-- Cordova 2.2 -->
-        <plugins-plist key="WPBilling" string="WPBilling" />
-                    
-        <!-- Cordova 2.5+ -->
         <config-file target="config.xml" parent="/*">
             <feature name="WPBilling">
                 <param name="wp-package" value="WPBilling"/>
             </feature>
         </config-file>
 
-        <source-file src="src/wp/Billing.cs" />
+        <source-file src="src/wp/WPBilling.cs" />
     </platform>
 </plugin>
